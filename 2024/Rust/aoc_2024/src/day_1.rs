@@ -1,14 +1,19 @@
 use std::fs;
 
 pub fn day_1_main() {
+    //Ingest data
     let file_name = "inputs/day_1_input.txt";
     let contents = fs::read_to_string(file_name)
         .expect("Failed to read File");
+
+    //Split by each line
     let parts: Vec<&str> = contents.split("\n").collect();
 
+    //Vectors for holding data
     let mut vec1: Vec<i32> = Vec::new();
     let mut vec2: Vec<i32> = Vec::new();
 
+    //Loop through vectors, take each value, convert to i32 and push to vec1/vecw
     for i in 0..parts.len()-1{
         let sp: Vec<&str> = parts[i].split("   ").collect();
         for j in (0..sp.len()).step_by(2){
@@ -17,6 +22,7 @@ pub fn day_1_main() {
         }
     }
     
+    //Clone them before they change, probably a better way of going about this
     let vec1_2: Vec<i32> = vec1.clone();
     let vec2_2: Vec<i32> = vec2.clone();
 
@@ -42,10 +48,9 @@ fn part_1(mut list_1: Vec<i32>, mut list_2: Vec<i32>) -> i32 {
 
 fn part_2(list_1: Vec<i32>, list_2: Vec<i32>) -> i32 {
     let mut similar_score: i32 = 0;
-    let mut count_from_list: i32 = 0;
 
     for i in 0..list_1.len(){
-        count_from_list = 0;
+        let mut count_from_list: i32 = 0;
         for j in 0..list_2.len(){
             if list_1[i] == list_2[j]{
                 count_from_list += 1;
