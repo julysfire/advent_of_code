@@ -2,7 +2,7 @@ def day_2(part_2_opt):
     good_reports = 0
 
     # Parse data from txt file
-    with open("inputs\\day_2_input.txt") as input_file:
+    with open("Inputs/day_2_input.txt") as input_file:
         for line in input_file:
             splitter = line.split(" ")
 

@@ -2,7 +2,7 @@ def part_1():
     total_result = 0
     parsed_data = []
     # Parse data from txt file
-    with open("inputs\\day_4_input.txt") as input_file:
+    with open("Inputs/day_4_input.txt") as input_file:
         for line in input_file:
             splitter = list(line)
             parsed_data.append(splitter)

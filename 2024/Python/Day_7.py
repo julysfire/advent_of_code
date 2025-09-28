@@ -48,7 +48,7 @@ def parse_input():
     test_eq = []
     num_list = []
 
-    with open("inputs\\day_7_input.txt") as input_file:
+    with open("Inputs/day_7_input.txt") as input_file:
         for line in input_file:
             pre_split = line.replace('\n', '')
             holder = pre_split.split(":")

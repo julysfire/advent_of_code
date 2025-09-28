@@ -5,7 +5,7 @@ def parse_input():
     rules = []
     updates = []
 
-    with open("inputs\\day_5_input.txt") as input_file:
+    with open("Inputs/day_5_input.txt") as input_file:
         for line in input_file:
             pre_split.append(line)
 

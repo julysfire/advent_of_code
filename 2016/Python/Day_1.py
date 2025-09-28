@@ -1,5 +1,5 @@
 def parse_input():
-    with open("inputs/day_1_input.txt") as input_file:
+    with open("Inputs/day_1_input.txt") as input_file:
         for line in input_file:
            splitter = line.split(", ")
 

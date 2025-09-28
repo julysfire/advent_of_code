@@ -142,7 +142,7 @@ def reset_map(full_map):
 def parse_input():
     map_of_area = []
 
-    with open("inputs\\day_6_input.txt") as input_file:
+    with open("Inputs/day_6_input.txt") as input_file:
         for line in input_file:
             pre_split = line.replace('\n', '')
             map_of_area.append(list(pre_split))
