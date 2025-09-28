@@ -4,7 +4,7 @@ import re
 def part_1():
     total_result = 0
     # Parse data from txt file
-    with open("inputs\\day_3_input.txt") as input_file:
+    with open("Inputs/day_3_input.txt") as input_file:
         input_text = input_file.read()
 
     breaker = True

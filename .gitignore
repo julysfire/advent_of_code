@@ -1,7 +1,9 @@
-2024/Inputs
+2024/Python/Inputs
 2024/.idea
-2016/Inputs
+2016/Python/Inputs
 2016/.idea
+2015/Python/Inputs
+2015/.idea
 2024/Rust/aoc_2024/inputs
 2024/Rust/aoc_2024/target/
 2024/Rust/aoc_2024/Cargo.lock
@@ -10,3 +12,7 @@
 2016/Rust/aoc_2016/target/
 2016/Rust/aoc_2016/Cargo.lock
 2016/Rust/aoc_2016/Cargo.toml
+2015/Rust/aoc_2015/inputs
+2015/Rust/aoc_2015/target/
+2015/Rust/aoc_2015/Cargo.lock
+2015/Rust/aoc_2015/Cargo.toml
