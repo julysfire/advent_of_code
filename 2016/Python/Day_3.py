@@ -28,6 +28,7 @@ def part_1(list_1):
         x = split_and_clean(i)
 
         if (int(x[0]) + int(x[1])) > int(x[2]) and (int(x[0]) + int(x[2])) > int(x[1]) and (int(x[2]) + int(x[1])) > int(x[0]):
+            print(x)
             counter+=1
     return counter
 
