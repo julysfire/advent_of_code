@@ -1,5 +1,6 @@
 */Python/Inputs/
 */.idea/
+.idea
 */Rust/*/src/inputs/
 */Rust/*/target/
 */Rust/*/Cargo.lock
