@@ -1,43 +1,44 @@
 def parse_input():
     with open("inputs/day_1_input.txt") as input_file:
         for line in input_file:
-           splitter = line.split(", ")
+            splitter = line.split(", ")
 
-           #Remove newline from the splitter
-           splitter[len(splitter)-1] = splitter[len(splitter)-1].replace("\n", "") 
+            # Remove newline from the splitter
+            splitter[len(splitter) - 1] = splitter[len(splitter) - 1].replace("\n", "")
 
     return splitter
+
 
 def part_1(list_1):
     loc = [0, 0]
 
-    #0 = N, 1 = E, 2 = S, 3 = W
+    # 0 = N, 1 = E, 2 = S, 3 = W
     heading = 0
 
     for i in list_1:
-        #Parse instruction
+        # Parse instruction
         dir_move = i[0]
         num_move = int(i[1:])
 
-        #Change heading
+        # Change heading
         if dir_move == "R":
             heading += 1
         else:
             heading -= 1
 
-        #Check for wrap around
+        # Check for wrap around
         if heading < 0:
             heading = 3
         elif heading > 3:
             heading = 0
 
-        #Move
+        # Move
         if heading == 0:
             loc[0] = loc[0] + num_move
         elif heading == 1:
             loc[1] = loc[1] + num_move
         elif heading == 2:
-            loc[0] = loc[0] -  num_move
+            loc[0] = loc[0] - num_move
         elif heading == 3:
             loc[1] = loc[1] - num_move
 
@@ -48,34 +49,34 @@ def part_2(list_1):
     loc = [0, 0]
     loc_mem = []
 
-    #0 = N, 1 = E, 2 = S, 3 = W
+    # 0 = N, 1 = E, 2 = S, 3 = W
     heading = 0
 
     for i in list_1:
-        #Parse instruction
+        # Parse instruction
         dir_move = i[0]
         num_move = int(i[1:])
 
-        #Change heading
+        # Change heading
         if dir_move == "R":
             heading += 1
         else:
             heading -= 1
 
-        #Check for wrap around
+        # Check for wrap around
         if heading < 0:
             heading = 3
         elif heading > 3:
             heading = 0
 
-        #Move
-        for j in range(0,num_move):
+        # Move
+        for j in range(0, num_move):
             if heading == 0:
                 loc[0] = loc[0] + 1
             elif heading == 1:
                 loc[1] = loc[1] + 1
             elif heading == 2:
-                loc[0] = loc[0] -  1
+                loc[0] = loc[0] - 1
             elif heading == 3:
                 loc[1] = loc[1] - 1
 
@@ -87,7 +88,8 @@ def part_2(list_1):
     print("Couldn't find it...")
     return 0
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # Variables
     list_1 = []
 

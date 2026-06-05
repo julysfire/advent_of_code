@@ -1,28 +1,27 @@
-use std::fs;
 use regex::Regex;
+use std::fs;
 
-pub fn day_3_main(){
+pub fn day_3_main() {
     part_1();
     part_2();
 }
 
-fn part_1(){
+fn part_1() {
     //Ingest data
     let file_name = "inputs/day_3_input.txt";
-    let contents:String = fs::read_to_string(file_name)
-        .expect("Failed to read File");
+    let contents: String = fs::read_to_string(file_name).expect("Failed to read File");
 
-    let mut breaker:bool = true;
-    let mut sumr:i32 = 0;
+    let mut breaker: bool = true;
+    let mut sumr: i32 = 0;
 
-    while breaker{
-        let re = Regex::new(r"mul\(([0-9]|[1-9][0-9]|[1-9][0-9][0-9]),([0-9]|[1-9][0-9]|[1-9][0-9][0-9])\)").unwrap();
-        let mut_index:usize = contents.find("mut");
+    while breaker {
+        let re = Regex::new(
+            r"mul\(([0-9]|[1-9][0-9]|[1-9][0-9][0-9]),([0-9]|[1-9][0-9]|[1-9][0-9][0-9])\)",
+        )
+        .unwrap();
+        let mut_index: usize = contents.find("mut");
 
-        let n_string:String = contents.chars().skip(mut_index).collect();
-
-
-
+        let n_string: String = contents.chars().skip(mut_index).collect();
 
         /*
         // TODO: COnvert this down
@@ -46,14 +45,13 @@ fn part_1(){
     println!("Total multiple from Part 1: {}", sumr);
 }
 
-fn part_2(){
+fn part_2() {
     //Ingest data
     let file_name = "inputs/day_2_input.txt";
-    let contents = fs::read_to_string(file_name)
-        .expect("Failed to read File");
+    let contents = fs::read_to_string(file_name).expect("Failed to read File");
 
-    let mut breaker:bool = true;
-    let mut sumr:i32 = 0;
+    let mut breaker: bool = true;
+    let mut sumr: i32 = 0;
 
     println!("Total multiple from Part 2: {}", sumr);
 }

@@ -1,5 +1,6 @@
 import math
 
+
 def parse_input():
     pre_split = []
     rules = []
@@ -11,19 +12,20 @@ def parse_input():
 
     file_split_flag = True
     for line in pre_split:
-        line = line.replace('\n', '')
+        line = line.replace("\n", "")
 
         if file_split_flag:
             if line == "":
                 file_split_flag = False
             else:
-                line = line.split('|')
+                line = line.split("|")
                 rules.append(line)
         else:
-            line = line.split(',')
+            line = line.split(",")
             updates.append(line)
 
     return rules, updates
+
 
 def check_rules(rules, num):
     before_list = []
@@ -31,6 +33,7 @@ def check_rules(rules, num):
         if i[0] == num:
             before_list.append(i[1])
     return before_list
+
 
 def part_1():
     good_counter = 0
@@ -51,8 +54,14 @@ def part_1():
             good_counter += 1
             adder_counter = adder_counter + int(up[math.floor(len(up) / 2)])
 
-    print("Part 1 Good Counter: " + str(good_counter) + "    And Sum from Middle Pages: " + str(adder_counter))
+    print(
+        "Part 1 Good Counter: "
+        + str(good_counter)
+        + "    And Sum from Middle Pages: "
+        + str(adder_counter)
+    )
     return adder_counter
+
 
 def part_2():
     good_counter = 0
@@ -71,10 +80,18 @@ def part_2():
                 break
         if bad:
             good_counter += 1
-            adder_counter = adder_counter + int(updated_line[math.floor(len(updated_line) / 2)])
+            adder_counter = adder_counter + int(
+                updated_line[math.floor(len(updated_line) / 2)]
+            )
 
-    print("Part 2 Rules that were Bad, now Good Counter: " + str(good_counter) + "    And Sum from Middle Pages: " + str(adder_counter))
+    print(
+        "Part 2 Rules that were Bad, now Good Counter: "
+        + str(good_counter)
+        + "    And Sum from Middle Pages: "
+        + str(adder_counter)
+    )
     return adder_counter
+
 
 def validate(up_list, before_list, i, part_2_flag, rule_list=None):
     updated_line = []
@@ -104,7 +121,7 @@ def fix_pages(rule_list, page_list):
                 if r[0] == page_list[i]:
                     for j in range(0, i):
                         if r[1] == page_list[j]:
-                            #Swap
+                            # Swap
                             swap_1 = page_list[j]
                             swap_2 = page_list[i]
                             page_list[j] = swap_2
@@ -124,6 +141,6 @@ def fix_pages(rule_list, page_list):
     return page_list
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Total Correct Updates: " + str(part_1()))
     print("Total After Updates: " + str(part_2()))

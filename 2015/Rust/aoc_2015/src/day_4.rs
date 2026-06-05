@@ -1,27 +1,26 @@
 use std::fs;
-use std::sync::{Arc};
+use std::sync::Arc;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::thread;
 
-pub fn day_4_main(){
+pub fn day_4_main() {
     part_1();
     part_2();
 }
 
-fn part_1(){
+fn part_1() {
     //Ingest data
     let file_name = "inputs/day_4_input.txt";
-    let contents = fs::read_to_string(file_name)
-        .expect("Failed to read File");
+    let contents = fs::read_to_string(file_name).expect("Failed to read File");
 
     let mut num = 0;
 
-    loop{
-        let test_string: &str = &(contents.clone() + &num.to_string()).replace("\n","");
+    loop {
+        let test_string: &str = &(contents.clone() + &num.to_string()).replace("\n", "");
 
         let digest_str = hash_value(test_string);
         let first_five = &digest_str[..5];
-        if first_five == "00000"{
+        if first_five == "00000" {
             break;
         }
 
@@ -31,11 +30,10 @@ fn part_1(){
     println!("The first number in Part 1 is: {}", num);
 }
 
-fn part_2(){
+fn part_2() {
     //Ingest data
     let file_name = "inputs/day_4_input.txt";
-    let contents = fs::read_to_string(file_name)
-        .expect("Failed to read File");
+    let contents = fs::read_to_string(file_name).expect("Failed to read File");
     let base = Arc::new(contents);
 
     let counter = Arc::new(AtomicU64::new(0));
@@ -96,7 +94,7 @@ fn part_2(){
     }
 }
 
-fn hash_value(hash_string: &str) -> String{
+fn hash_value(hash_string: &str) -> String {
     let digest = md5::compute(hash_string);
     let hashed_str = format!("{:x}", digest);
 

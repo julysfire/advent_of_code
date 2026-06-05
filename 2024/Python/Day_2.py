@@ -6,10 +6,10 @@ def day_2(part_2_opt):
         for line in input_file:
             splitter = line.split(" ")
 
-            #Remove newline from the split
-            splitter[len(splitter)-1] = splitter[len(splitter)-1].replace("\n", "")
+            # Remove newline from the split
+            splitter[len(splitter) - 1] = splitter[len(splitter) - 1].replace("\n", "")
 
-            #Convert to int
+            # Convert to int
             splitter = [int(x) for x in splitter]
 
             valid_res = test_for_valid(splitter)
@@ -26,7 +26,7 @@ def day_2(part_2_opt):
                         good_reports += 1
                         break
 
-                    #Add back
+                    # Add back
                     splitter.insert(i, removed)
     return good_reports
 
@@ -57,6 +57,6 @@ def test_for_valid(arr):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Number of good reports: " + str(day_2(False)))
     print("Number of good reports within error rate of 1: " + str(day_2(True)))

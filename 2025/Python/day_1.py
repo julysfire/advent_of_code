@@ -4,10 +4,11 @@ def parse_input():
         for line in input_file:
             splitter = line.split("\n")
 
-            #Assign to each list
+            # Assign to each list
             list_1.append(splitter[0])
 
     return list_1
+
 
 def part_1(list_1):
     dial_loc = 50
@@ -22,7 +23,7 @@ def part_1(list_1):
         else:
             dial_loc = dial_loc + num
 
-        #Handle rotations 
+        # Handle rotations
         if dial_loc < 0:
             while dial_loc < 0:
                 dial_loc += 100
@@ -34,6 +35,7 @@ def part_1(list_1):
             zero_count += 1
 
     return zero_count
+
 
 def part_2(list_1):
     dial_loc = 50
@@ -53,7 +55,7 @@ def part_2(list_1):
         else:
             dial_loc = dial_loc + num
 
-        #Handle rotations 
+        # Handle rotations
         if dial_loc < 0:
             while dial_loc < 0:
                 dial_loc += 100
@@ -70,14 +72,13 @@ def part_2(list_1):
         if dial_loc == 100:
             zero_count += 1
             dial_loc = 0
-    
-        pre_loc = dial_loc
 
+        pre_loc = dial_loc
 
     return zero_count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Variables
     list_1 = []
 

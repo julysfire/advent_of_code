@@ -5,3 +5,8 @@
 */Rust/*/target/
 */Rust/*/Cargo.lock
 */Rust/*/Cargo.toml
+*/C/inputs/
+*/C/a.out
+*/C/ofile*.txt
+*/Python/ofile*.txt
+.venv/
