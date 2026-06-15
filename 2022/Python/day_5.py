@@ -39,7 +39,7 @@ def parse_input():
     return crane, instructs
 
 
-def day_1():
+def part_1():
     crane, instructs = parse_input()
     final_str = ""
 
@@ -65,7 +65,7 @@ def day_1():
     """
 
 
-def day_2():
+def part_2():
     crane, instructs = parse_input()
     sumr = 0
 
@@ -73,5 +73,5 @@ def day_2():
 
 
 if __name__ == "__main__":
-    day_1()
-    # day_2()
+    part_1()
+    # part_2()

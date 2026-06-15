@@ -6,7 +6,11 @@
 */Rust/*/Cargo.lock
 */Rust/*/Cargo.toml
 */C/inputs/
+*/C/Inputs/
 */C/a.out
+*/cpp/inputs/
+*/cpp/Inputs/
+*/cpp/a.out
 */C/ofile*.txt
 */Python/ofile*.txt
 .venv/

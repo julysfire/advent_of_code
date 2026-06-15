@@ -7,7 +7,7 @@ def parse_input():
     return splitter
 
 
-def day_1():
+def part_1():
     data = parse_input()
     sumr = 0
     alpha_lower = "abcdefghijklmnopqrstuvwxyz"
@@ -35,7 +35,7 @@ def day_1():
     print("The sum of priorties for Part 1 is: " + str(sumr))
 
 
-def day_2():
+def part_2():
     data = parse_input()
     sumr = 0
     alpha_lower = "abcdefghijklmnopqrstuvwxyz"
@@ -73,5 +73,5 @@ def day_2():
 
 
 if __name__ == "__main__":
-    day_1()
-    day_2()
+    part_1()
+    part_2()

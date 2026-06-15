@@ -27,34 +27,29 @@ def part_1(list_1):
 
 
 def part_2(list_1):
-    pass
+    total_dims = 0
+
+    for i in list_1:
+        l = int(i[0])
+        w = int(i[1])
+        h = int(i[2])
+
+        bow = l * w * h
+
+        prez_dim = [l, w, h]
+        prez_dim.sort()
+
+        ribbon = prez_dim[0] + prez_dim[0] + prez_dim[1] + prez_dim[1]
+
+        total_dims = total_dims + bow + ribbon
+
+    return total_dims
 
 
 if __name__ == "__main__":
-    # Variables
     list_1 = []
 
     list_1 = parse_input()
 
-    print("Total Square Area: " + str(part_1(list_1)))
-    print(": " + str(part_2(list_1)))
-
-"""
-            print("l w h : " + str(l) + " " + str(w) + " " + str(h))
-            print("surface_area: " + str(surface_area))
-            print("slack: " + str(slack))
-            print("\n")
-            f.write(
-                "l w h: "
-                + str(l)
-                + " "
-                + str(w)
-                + " "
-                + str(h)
-                + "\nsurfaceArea: "
-                + str(surface_area)
-                + "\nslack: "
-                + str(slack)
-                + "\n\n"
-            )
-"""
+    print("Total Square Area for Part 1: " + str(part_1(list_1)))
+    print("Total Square Area for Part 2: " + str(part_2(list_1)))

@@ -7,7 +7,7 @@ def parse_input():
     return splitter
 
 
-def day_1():
+def part_1():
     data = parse_input()
     fatso = 0
     cals = 0
@@ -33,7 +33,7 @@ def day_1():
     )
 
 
-def day_2():
+def part_2():
     data = parse_input()
     elfs_data = []
     cals = 0
@@ -54,5 +54,5 @@ def day_2():
 
 
 if __name__ == "__main__":
-    day_1()
-    day_2()
+    part_1()
+    part_2()

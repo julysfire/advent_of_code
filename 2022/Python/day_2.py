@@ -8,7 +8,7 @@ def parse_input():
     return splitter
 
 
-def day_1():
+def part_1():
     # A = ROCK, B = PAPER, C = SCISSORS
     # X = ROCK, Y = PAPER, Z = SCISSORS
     # 1, 2, 3 points
@@ -50,7 +50,7 @@ def day_1():
     print("The total score for Part 1: " + str(sumr))
 
 
-def day_2():
+def part_2():
     # A = ROCK, B = PAPER, C = SCISSORS
     # X = ROCK, Y = PAPER, Z = SCISSORS
     # 1, 2, 3 points
@@ -93,5 +93,5 @@ def day_2():
 
 
 if __name__ == "__main__":
-    day_1()
-    day_2()
+    part_1()
+    part_2()
